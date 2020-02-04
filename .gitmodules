@@ -1,0 +1,6 @@
+[submodule "kszkepzes-backend"]
+	path = kszkepzes-backend
+	url = https://github.com/DevTeamSCH/kszkepzes-backend
+[submodule "kszkepzes-frontend"]
+	path = kszkepzes-frontend
+	url = https://github.com/DevTeamSCH/kszkepzes-frontend
