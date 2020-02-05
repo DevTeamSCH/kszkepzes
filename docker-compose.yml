@@ -20,6 +20,15 @@ services:
       - POSTGRES_USER=django
       - POSTGRES_PASSWORD=django
       - POSTGRES_DB=kszkepzes
+  kszkepzes-frontend:
+    build: ./kszkepzes-frontend
+    command: npm start
+    volumes:
+    - ./kszkepzes-frontend/:/usr/app/
+    ports:
+      - 3000:3000
+    depends_on:
+      - kszkepzes-backend
 
 volumes:
   postgres_data:

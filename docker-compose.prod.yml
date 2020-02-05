@@ -15,6 +15,13 @@ services:
       - ./.env.prod
     depends_on:
       - db
+  kszkepzes-frontend:
+    build: ./kszkepzes-frontend
+    command: npm start
+    expose:
+      - 3000
+    depends_on:
+      - kszkepzes-backend
   db:
     image: postgres:12.0-alpine
     volumes:
