@@ -34,9 +34,10 @@ services:
       - static_volume:/home/app/kszkepzes-backend/staticfiles
       - media_volume:/home/app/kszkepzes-backend/mediafiles
     ports:
-      - 1337:80
+      - '127.0.0.1:80:80'
     depends_on:
       - kszkepzes-backend
+      - kszkepzes-frontend
 
 volumes:
   postgres_data:
